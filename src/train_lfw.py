@@ -1,6 +1,7 @@
 import argparse
 import numpy as np
 import os
+import time
 
 from train import train
 
@@ -88,4 +89,9 @@ def main():
     train(args, image_path, source_paths, target_paths, clip_rect, clip_rect)
 
 if __name__ == '__main__':
+    start = time.time()
     main()
+    end = time.time()
+    hours, rem = divmod(end-start, 3600)
+    minutes, seconds = divmod(rem, 60)
+    print("{:0>2}:{:0>2}:{:05.2f}".format(int(hours),int(minutes), int(seconds)))
