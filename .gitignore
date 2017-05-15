@@ -3,3 +3,5 @@
 *.caffemodel
 image/*
 !image/.gitkeep
+lfw-deepfunneled/
+lfw_attributes.txt
